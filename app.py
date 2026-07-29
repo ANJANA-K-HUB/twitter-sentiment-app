@@ -13,7 +13,6 @@ st.set_page_config(
 # 2. Cache the model loading so it stays in memory and runs lightning-fast
 @st.cache_resource
 def load_custom_model():
-    
     model_path = "./best_model"
     tokenizer = AutoTokenizer.from_pretrained(model_path)
     model = AutoModelForSequenceClassification.from_pretrained(model_path)
